@@ -23,7 +23,7 @@ public class DemoApplication {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/api/**")
-                        .allowedOrigins("http://localhost:3000") // Tu frontend React
+                        .allowedOrigins("https://hotel-front-production.up.railway.app/") // Tu frontend React
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*")
                         .allowCredentials(true);
@@ -31,14 +31,14 @@ public class DemoApplication {
         };
     }
 
-    @Configuration
-    public class WebConfig implements WebMvcConfigurer {
+/*    @Configuration
+    public static class WebConfig implements WebMvcConfigurer {
 
         @Override
         public void addResourceHandlers(ResourceHandlerRegistry registry) {
             registry.addResourceHandler("/uploads/**")
                     .addResourceLocations("file:uploads/");
         }
-    }
+    }*/
 
 }
